@@ -1,10 +1,8 @@
-FROM python:3.7-alpine
+FROM python:3.7
 
 # Set the working directory and copy the code over
-
-RUN apk --update add bash nano g++ gcc make autoconf automake alpine-sdk linux-headers flask
-COPY . .
 WORKDIR ./app/vulpy/bad
+COPY . .
 
 # Install dependencies
 RUN pip3 install -r ./requirements.txt
