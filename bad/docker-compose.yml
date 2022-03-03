@@ -6,5 +6,6 @@ services:
     volumes:
       - .:/vulpy
       - ./contrast_security.yaml:/app/vulpy/bad/contrast_security.yaml
+    container_name: vulpy-contrast
     ports:
       - "5002:5002"
