@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+  docker-vulpy_latest:
+    build: .
+    volumes:
+      - .:/vulpy
+      - ./contrast_security.yaml:/app/vulpy/contrast_security.yaml
+    ports:
+      - "5002:5002"
