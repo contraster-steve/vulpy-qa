@@ -13,6 +13,7 @@ RUN chmod +x ./startup.sh
 # Create the atomizer container
 FROM alpine:latest
 
+WORKDIR ./app/vulpy/bad
 RUN ls -la
 
 # Add port 5002 
