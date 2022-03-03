@@ -11,7 +11,7 @@ from mod_hello import mod_hello
 from mod_mfa import mod_mfa
 from mod_posts import mod_posts
 from mod_user import mod_user
-from contrast.agent.middlewares.flask_middleware import FlaskMiddleware as ContrastMiddleware
+from contrast.flask import ContrastMiddleware
 
 app = Flask('vulpy')
 app.wsgi_app = ContrastMiddleware(app)
