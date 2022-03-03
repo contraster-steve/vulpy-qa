@@ -1,7 +1,7 @@
 FROM python:3
 
 # Set the working directory and copy the code over
-WORKDIR ./src/mypackage/vulpy
+WORKDIR ./app/vulpy/bad
 COPY . .
 
 # Install dependencies
