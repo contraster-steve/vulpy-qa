@@ -11,8 +11,10 @@ from mod_hello import mod_hello
 from mod_mfa import mod_mfa
 from mod_posts import mod_posts
 from mod_user import mod_user
+from contrast.agent.middlewares.flask_middleware import FlaskMiddleware as ContrastMiddleware
 
 app = Flask('vulpy')
+app.wsgi_app = ContrastMiddleware(app)
 app.config['SECRET_KEY'] = 'aaaaaaa'
 
 app.register_blueprint(mod_hello, url_prefix='/hello')
@@ -52,4 +54,4 @@ def add_csp_headers(response):
     return response
 
 
-app.run(debug=True, host='127.0.1.1', port=5000, extra_files='csp.txt')
+app.run(debug=True, host='0.0.0.0', port=5002, extra_files='csp.txt')
