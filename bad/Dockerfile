@@ -7,9 +7,7 @@ COPY . .
 # Install dependencies
 RUN pip3 install -r ./requirements.txt
 
-# Set environment variables
-RUN export FLASK_APP=vulpy
-RUN export FLASK_ENV=development
+RUN chmod +x ./startup.sh
 
 # Create the atomizer container
 FROM alpine:latest
