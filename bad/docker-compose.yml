@@ -5,6 +5,6 @@ services:
     build: .
     volumes:
       - .:/vulpy
-      - ./contrast_security.yaml:/app/vulpy/contrast_security.yaml
+      - ./contrast_security.yaml:/app/vulpy/bad/contrast_security.yaml
     ports:
       - "5002:5002"
