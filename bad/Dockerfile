@@ -19,4 +19,4 @@ WORKDIR /
 EXPOSE 5002
 
 # Run Vulpy
-ENTRYPOINT ["/bin/sh", "startup.sh"]
+ENTRYPOINT ["/bin/sh", "./startup.sh"]
