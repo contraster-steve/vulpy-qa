@@ -11,7 +11,7 @@ RUN pip3 install -r ./requirements.txt
 RUN chmod +x ./startup.sh
 
 # Create the atomizer container
-FROM alpine:latest
+FROM python:3.7
 
 WORKDIR ./app/vulpy/bad
 RUN ls -la
