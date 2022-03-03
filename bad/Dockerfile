@@ -20,4 +20,4 @@ WORKDIR /
 EXPOSE 5002
 
 # Run Vulpy
-ENTRYPOINT flask run --host=0.0.0.0
+ENTRYPOINT ["/bin/bash", "startup.sh"]
