@@ -13,8 +13,10 @@ RUN chmod +x ./startup.sh
 # Create the atomizer container
 FROM alpine:latest
 
+RUN ls -la
+
 # Add port 5002 
 EXPOSE 5002
 
 # Run Vulpy
-ENTRYPOINT ["/bin/sh", "./startup.sh"]
+ENTRYPOINT ["/bin/sh", "startup.sh"]
