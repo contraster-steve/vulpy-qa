@@ -54,4 +54,4 @@ def add_csp_headers(response):
     return response
 
 
-app.run(debug=True, host='0.0.0.0', port=5002, extra_files='csp.txt')
+app.run(debug=True, host='0.0.0.0', port=5000, extra_files='csp.txt')
