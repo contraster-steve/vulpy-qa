@@ -13,8 +13,6 @@ RUN chmod +x ./startup.sh
 # Create the atomizer container
 FROM alpine:latest
 
-WORKDIR /
-
 # Add port 5002 
 EXPOSE 5002
 
