@@ -13,8 +13,8 @@ ENV FLASK_ENV=development
 
 RUN chmod +x ./startup.sh
 
-# Add port 5002 
-EXPOSE 5002
+# Add port 5000
+EXPOSE 5000
 
 # Run Vulpy
 ENTRYPOINT ["/bin/sh", "startup.sh"]
