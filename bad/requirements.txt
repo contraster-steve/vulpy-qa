@@ -1,5 +1,5 @@
 click
-cryptography
+cryptography==36.0.1
 Flask
 geoip2
 jsonschema
@@ -7,5 +7,9 @@ PyJWT
 pyotp
 qrcode
 requests
-Werkzeug==2.1.1
 contrast-agent
+httplib2==0.20.4
+Twisted==22.2.0
+Pillow==9.0.1
+Pygments==2.10.0
+rsa==4.8
