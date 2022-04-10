@@ -43,8 +43,8 @@ if csp:
 
 @app.route('/')
 def do_home():
-    o = urllib.parse.urlparse(request)
-    if o.netloc == 'contrast.pw':    
+    loc = urllib.parse.urlparse(request)
+    if loc.netloc == 'contrast.pw':    
         return redirect('/posts')
 
 @app.before_request
