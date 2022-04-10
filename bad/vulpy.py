@@ -17,6 +17,7 @@ import urllib
 app = Flask('vulpy')
 app.wsgi_app = ContrastMiddleware(app)
 app.config['SECRET_KEY'] = 'aaaaaaa'
+app.config["SESSION_COOKIE_SECURE"] = True
 
 app.register_blueprint(mod_hello, url_prefix='/hello')
 app.register_blueprint(mod_user, url_prefix='/user')
