@@ -1,11 +1,11 @@
-Click==7.0
-cryptography>=3.2
+click
+cryptography
 Flask
 geoip2
-jsonschema==3.2.0
-PyJWT==1.7.1
+jsonschema
+PyJWT
 pyotp
 qrcode
-requests==2.27.1
+requests
 Werkzeug==2.1.1
 contrast-agent
