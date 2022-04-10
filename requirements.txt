@@ -7,4 +7,5 @@ PyJWT
 pyotp
 qrcode
 requests
+setuptools==60.9.3
 contrast-agent
