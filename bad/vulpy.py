@@ -12,6 +12,7 @@ from mod_mfa import mod_mfa
 from mod_posts import mod_posts
 from mod_user import mod_user
 from contrast.flask import ContrastMiddleware
+import urllib
 
 app = Flask('vulpy')
 app.wsgi_app = ContrastMiddleware(app)
@@ -41,7 +42,9 @@ if csp:
 
 @app.route('/')
 def do_home():
-    return redirect('/posts')
+    o = urllib.parse.urlparse(request)
+    if o.netloc == 'contrast.pw':    
+        return redirect('/posts')
 
 @app.before_request
 def before_request():
