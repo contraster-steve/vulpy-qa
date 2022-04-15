@@ -2,9 +2,13 @@ version: '2'
 
 services:
   docker-vulpy_latest:
+    image: smithst987/vulpy_docker:latest
+    container_name: vulpy  
     build: .
-    volumes:
-      - ./contrast_security.yaml:/app/vulpy/bad/contrast_security.yaml
-    container_name: vulpy-contrast
+    environment:  
+      - CONTRAST__ENABLE=TRUE
+      - CONTRAST__APPLICATION__NAME=Vulpy
+      - CONTRAST__APPLICATION__GROUP=application_control_2
+      - CONTRAST__APPLICATION__METADATA=bU=PS, contact=steve.smith@contrastsecurity.com    
     ports:
       - "5000:5000"
