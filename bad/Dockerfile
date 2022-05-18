@@ -8,9 +8,6 @@ COPY . .
 RUN pip3 install --upgrade pip
 RUN pip3 install -r ./requirements.txt
 
-ENV FLASK_APP=vulpy
-ENV FLASK_ENV=development
-
 RUN chmod +x ./startup.sh
 
 # Add port 5000
