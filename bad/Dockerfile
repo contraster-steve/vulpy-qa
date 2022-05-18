@@ -7,6 +7,7 @@ COPY . .
 # Install dependencies
 RUN pip3 install --upgrade pip
 RUN pip3 install -r ./requirements.txt
+RUN db_init.py
 
 RUN chmod +x ./startup.sh
 
