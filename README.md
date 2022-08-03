@@ -43,7 +43,7 @@ This repo includes the components necessary to instrument contrast Assess/Protec
 
 Specifically modified:
 
-1. This app uses a wrapper.py script to call vuply.py. Vulpy.py (the main part of this app) hasn't been modified to include Contrast. The wrapper includes the Contrast Middleware component "from contrast.flask import ContrastMiddleware" and uses a function to call the main application.
+1. This app uses a wrapper.py script to call vuply.py. The wrapper includes the Contrast Middleware component "from contrast.flask import ContrastMiddleware" and uses a function to call the main application. Vulpy.py (the main part of this app) hasn't been modified to include Contrast. 
 2. Updated requirements.txt to inlcude contrast-agent and an update to the library "setuptools" to make it not vulnerable.
 3. The inclusion of a new file, "startup.sh" which is used to export the Flask environment variables and run the application on 0.0.0.0 (making it accessible via the Internet instead of localhost).
 4. The Dockerfile upgrades the version of pip, installs the requirements, updates the database with seed data, and runs the startup.sh script.
