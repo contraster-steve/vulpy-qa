@@ -1,7 +1,7 @@
 #wrapper.py
 
 #from contrast.wsgi import ContrastMiddleware
-from contrast.flask import ContrastMiddleware # Vuply uses Flask instead of pure wsgi
+from contrast.flask import ContrastMiddleware # Vulpy uses Flask instead of pure wsgi
 
 main_module_name = 'vulpy.app'
 main_function_name = 'main'
